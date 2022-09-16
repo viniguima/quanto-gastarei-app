@@ -8,10 +8,12 @@ export default function App() {
     <View style={styles.container}> 
       <Image
         style={styles.tinyLogo}
-        source={require('public/images/logo-branca.png')}
+        source={require('./public/images/logo-branca.png')}
       /> 
-      <Text style={styles.white_text}>Clique se concorda</Text>
-      <Button title="Bosta" style={styles.white_text}/>
+      <Text style={styles.white_text}>Quanto irei gastar de combustível</Text>
+      <Button title="Calcular" style={styles.white_text, styles.button} onPress={() => navigation.navigate("Calcular")}/>
+      <Button title="Etanol/Gasolina" style={styles.white_text, styles.button}/>
+      <Button title="Como Usar" style={styles.white_text, styles.button}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -26,9 +28,16 @@ const styles = StyleSheet.create({
   },
   white_text: {
     color: 'white',
+    marginTop: 20
+  },
+  button: {
+    backgroundColor: '#5e4de0',
+    width: 200,
+    marginTop: 30,
+    
   },
   tinyLogo: {
-    width: 50,
-    height: 50,
+    width: 180,
+    height: 60,
   },
 });
