@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Alert } from 'react-native';
 import { Button } from "@react-native-material/core";
+import TextBox from "../components/CaixaDeTexto"
 // import { global_styles } from 'src/styles/global-styles'
 
 export default function Calcular() {
@@ -11,6 +12,7 @@ export default function Calcular() {
         source={require('../public/images/logo-branca.png')}
       /> 
       <Text style={styles.white_text}>Calcular</Text>
+      <TextBox/>
     </View>
   );
 }
