@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Alert } from 'react-native';
 import { Button } from "@react-native-material/core";
-// import { global_styles } from 'src/styles/global-styles'
+import { setGas } from "./Calcular";
 
-export default function Etanol() {
+export default function Etanol({navigation}) {
   return (
     <View style={styles.container}> 
       <Image
@@ -11,6 +11,8 @@ export default function Etanol() {
         source={require('../public/images/logo-branca.png')}
       /> 
       <Text style={styles.white_text}>Etanol ou Gasolina</Text>
+      <Button title="Etanol"  style={styles.white_text, styles.button} onPress={() => {setGas('etanol'); navigation.navigate('Calcular')}}/>
+      <Button title="Gasolina" style={styles.white_text, styles.button} onPress={() => {setGas('gasoline'); navigation.navigate('Calcular')}}/>
     </View>
   );
 }

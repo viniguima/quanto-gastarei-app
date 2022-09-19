@@ -4,6 +4,17 @@ import { Button } from "@react-native-material/core";
 import TextBox from "../components/CaixaDeTexto"
 // import { global_styles } from 'src/styles/global-styles'
 
+let gas = '';
+
+export const setGas = (params) => gas = params;
+export const getGas = () => gas;
+
+let distance = 0;
+
+export const setDistance = (params) => { distance = params; console.log(distance);};
+export const getDistance = () => distance;
+
+
 export default function Calcular() {
   return (
     <View style={styles.container}> 
