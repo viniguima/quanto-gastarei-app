@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { View, TextInput, Text } from "react-native";
-import { setDistance } from "../screens/Calcular";
+import { setDistance } from "../screens/CalculateScreen";
 
 
 export default function TextBox(){ 

@@ -1,18 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Alert } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Button } from "@react-native-material/core";
-import { setGas } from "./Calcular";
+import { setGas } from "./CalculateScreen";
+import Logo from '../components/Logo';
 
-export default function Etanol({navigation}) {
+export default function GasType({navigation}) {
   return (
     <View style={styles.container}> 
-      <Image
-        style={styles.tinyLogo}
-        source={require('../public/images/logo-branca.png')}
-      /> 
+      <Logo/> 
       <Text style={styles.white_text}>Etanol ou Gasolina</Text>
-      <Button title="Etanol"  style={styles.white_text, styles.button} onPress={() => {setGas('etanol'); navigation.navigate('Calcular')}}/>
-      <Button title="Gasolina" style={styles.white_text, styles.button} onPress={() => {setGas('gasoline'); navigation.navigate('Calcular')}}/>
+      <Button title="Etanol"  style={[styles.white_text, styles.button]} onPress={() => {setGas('etanol'); navigation.navigate('Calcular')}}/>
+      <Button title="Gasolina" style={[styles.white_text, styles.button]} onPress={() => {setGas('gasoline'); navigation.navigate('Calcular')}}/>
     </View>
   );
 }
