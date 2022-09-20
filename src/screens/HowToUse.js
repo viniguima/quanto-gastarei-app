@@ -1,15 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Alert } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Button } from "@react-native-material/core";
+import Logo from '../components/Logo';
 // import { global_styles } from 'src/styles/global-styles'
 
-export default function ComoUsar() {
+export default function HowToUse() {
   return (
     <View style={styles.container}> 
-      <Image
-        style={styles.tinyLogo}
-        source={require('../public/images/logo-branca.png')}
-      /> 
+      <Logo/> 
       <Text style={styles.white_text}>Como Usar</Text>
     </View>
   );
