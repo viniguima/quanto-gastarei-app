@@ -19,11 +19,11 @@ export default function CalculateScreen({navigation}) {
  
 function Calcular() {
   var autonomia = (distance / auto)
-  var totalGas = (autonomia*priceGas)
-  var resultTravel = (totalGas + travel)
+  var totalGas = (autonomia * priceGas)
+  var resultTravel = (totalGas * travel)
 
   var err = 'Digite um valor válido.'
-  var result = `Você gastará: R$${totalGas.toFixed(2)} e prescisará de ${autonomia.toFixed(2)} Litros de gasolina.`
+  var result = `Você gastará: R$${resultTravel.toFixed(2)} e prescisará de ${autonomia.toFixed(2)} Litros de gasolina.`
   if(isNaN(totalGas,autonomia)){
     setTotal(err)
   }else{

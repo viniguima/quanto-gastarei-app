@@ -3,11 +3,16 @@ import { Button } from "@react-native-material/core";
 import Logo from '../components/Logo';
 // import { global_styles } from 'src/styles/global-styles'
 
-export default function HowToUse() {
+export default function HowToUse({navigation}) {
   return (
     <View style={styles.container}> 
       <Logo/> 
-      <Text style={styles.white_text}>Como Usar</Text>
+      <Text style={styles.white_text_title}>Como Usar</Text>
+      <Text style={styles.white_text}>1- Consulte a distância clicando no botão CONSULTAR MAPS para verificar a distância do trajeto que você irá fazer no Google Maps.</Text>
+      <Text style={styles.white_text}>2- Preencha os campos com os dados solicitados em cada campo.</Text>
+      <Text style={styles.white_text}>3- Escolha o número de viagens ou quantas viagens você irá fazer, exemplo: ida e volta, seriam 2 duas viagens.</Text>
+      <Text style={styles.white_text}>4- Clique em calcular para ver o quanto você gastará de combustível nesse trajeto e quanto gastará de dinheiro.</Text>
+      <Text style={styles.white_text}>5- E agora com a funcionalidade de poder ver se vale a pena abastecer com Etanol ou Gasolina.</Text>        
     </View>
   );
 }
@@ -21,7 +26,15 @@ const styles = StyleSheet.create({
     },
     white_text: {
       color: 'white',
-      marginTop: 20
+      textAlign:'center',
+      fontSize:16,
+      padding:20
+    },
+    white_text_title: {
+      color: 'white',
+      textAlign:'center',
+      fontSize:25,
+      padding:20
     },
     button: {
       backgroundColor: '#5e4de0',
