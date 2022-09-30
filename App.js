@@ -7,6 +7,7 @@ import Home from './src/screens/Home';
 import CalculateScreen from './src/screens/CalculateScreen';
 import GasType from './src/screens/GasType';
 import HowToUse from './src/screens/HowToUse';
+import GoogleMaps from './src/components/GoogleMaps'
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ function MyStack() {
       <Stack.Screen name="Calcular" component={CalculateScreen} />
       <Stack.Screen name="Combustivel" component={GasType} />
       <Stack.Screen name="Como Usar" component={HowToUse} />
+      <Stack.Screen name="Google Maps" component={GoogleMaps} />
     </Stack.Navigator>
   );
 }
