@@ -24,10 +24,11 @@ function Calcular() {
 
   var err = 'Digite um valor válido.'
   var result = `Você gastará: R$${totalGas.toFixed(2)} e prescisará de ${autonomia.toFixed(2)} Litros de gasolina.`
-  if(isNaN(result)){
-    console.log(err)
+  if(isNaN(totalGas,autonomia)){
+    setTotal(err)
   }else{
-    console.log(result)
+    setTotal(result)
+
   }
 } 
   
@@ -69,7 +70,7 @@ function Calcular() {
                 keyboardType="numeric"
             />
       <Button title="Calcular" onPress={() => Calcular()} style={[styles.white_text, styles.button]}></Button>
-      <Text></Text>
+      <Text style={{flex:1, alignItems:'center', textAlign:'center', color: 'white',marginTop: 20, fontSize:20}}>{total}</Text>
      </ScrollView>
       </View>
     
