@@ -14,9 +14,9 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Calcular" component={CalculateScreen} />
-      <Stack.Screen name="Combustivel" component={GasType} />
+      <Stack.Screen name="Quanto Gastarei" component={Home} />
+      <Stack.Screen name="Gasto no Trajeto" component={CalculateScreen} />
+      <Stack.Screen name="Etanol ou Gasolina" component={GasType} />
       <Stack.Screen name="Como Usar" component={HowToUse} />
       <Stack.Screen name="Google Maps" component={GoogleMaps} />
     </Stack.Navigator>

@@ -7,9 +7,9 @@ export default function Home({navigation}) {
   return (
     <View style={styles.container}> 
       <Logo style={{flex: 1, alignItems: 'top'}}/>
-      <Text style={styles.white_text}>Quanto irei gastar de combustível</Text>
-      <Button title="Calcular" style={[styles.white_text, styles.button]} onPress={() => navigation.navigate('Calcular')}/>
-      <Button title="Combustivel" style={[styles.white_text, styles.button]} onPress={() => navigation.navigate('Combustivel')}/>
+      <Text style={styles.white_text}>Quanto irei gastar de combustível!</Text>
+      <Button title="Gasto do Trajeto" style={[styles.white_text, styles.button]} onPress={() => navigation.navigate('Gasto no Trajeto')}/>
+      <Button title="Etanol/Gas" style={[styles.white_text, styles.button]} onPress={() => navigation.navigate('Etanol ou Gasolina')}/>
       <Button title="Como Usar" style={[styles.white_text, styles.button]} onPress={() => navigation.navigate('Como Usar')}/>
       <StatusBar style="auto" />
     </View>
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
   },
   white_text: {
     color: 'white',
+    fontSize:20,
     marginTop: 20
   },
   button: {
