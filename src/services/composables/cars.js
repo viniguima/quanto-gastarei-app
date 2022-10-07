@@ -2,7 +2,7 @@ import useApi from "src/composables/useApi";
 
 const endpoint = "";
 
-export default function Calculate() {
+export default function Cars() {
   const { list, post, update, remove } = useApi(endpoint);
 
   return {
