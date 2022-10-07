@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView  } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, Platform  } from 'react-native';
 import { Button } from "@react-native-material/core";
 import Logo from "../components/Logo"
-import { TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView } from 'react-native';
 
 // import { global_styles } from 'src/styles/global-styles'
 
@@ -18,12 +18,17 @@ export default function CalculateScreen({navigation}) {
   const [googleMaps, setGoogleMaps] = useState(false)
  
 function Calcular() {
-  var autonomia = (distance / auto)
-  var totalGas = (autonomia * priceGas)
-  var resultTravel = (totalGas * travel)
+  let dist = parseFloat(distance)
+  let aut = parseFloat(auto)
+  let gasPrice = parseFloat(priceGas)
+  let trv = parseFloat(travel)
 
-  var err = 'Digite um valor válido.'
-  var result = `Você gastará: R$${resultTravel.toFixed(2)} e prescisará de ${autonomia.toFixed(2)} Litros de gasolina.`
+  let autonomia = (dist / aut)
+  let totalGas = (autonomia * gasPrice)
+  let resultTravel = (totalGas * trv)
+
+  let err = 'Digite um valor válido.'
+  let result = `Você gastará: R$${resultTravel.toFixed(2)} e prescisará de ${autonomia.toFixed(2)} Litros de gasolina.`
   if(isNaN(totalGas,autonomia)){
     setTotal(err)
   }else{
@@ -34,10 +39,14 @@ function Calcular() {
   
   
   return (
+    
+    <View style={styles.container}> 
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      
-      <View style={styles.container}> 
+
       <ScrollView contentContainerStyle={{flex:1, alignItems:'center',justifyContent:'center'}}>
+      <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}
+      style={{alignItems:'center',justifyContent:'center'}}
+      keyboardVerticalOffset={320}>
       <Logo/> 
       <Button title="Consultar Maps" style={styles.button_consultar} onPress={() => navigation.navigate('Google Maps')}></Button>
       <Text style={styles.white_text}>Calcular quanto irei gastar de combustível</Text>
@@ -70,12 +79,11 @@ function Calcular() {
                 keyboardType="numeric"
             />
       <Button title="Calcular" onPress={() => Calcular()} style={[styles.white_text, styles.button]}></Button>
-      <Text style={{flex:1, alignItems:'center', textAlign:'center', color: 'white',marginTop: 20, fontSize:20}}>{total}</Text>
+      <Text style={{alignItems:'center', textAlign:'center', color: 'white',marginTop:10, fontSize:20}}>{total}</Text>
+      </KeyboardAvoidingView>
      </ScrollView>
-      </View>
-    
       </TouchableWithoutFeedback>
-   
+      </View>
   );
 }
 
