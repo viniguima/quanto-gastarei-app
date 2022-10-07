@@ -46,7 +46,7 @@ function Calcular() {
       <ScrollView contentContainerStyle={{flex:1, alignItems:'center',justifyContent:'center'}}>
       <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}
       style={{alignItems:'center',justifyContent:'center'}}
-      keyboardVerticalOffset={320}>
+      keyboardVerticalOffset={280}>
       <Logo/> 
       <Button title="Consultar Maps" style={styles.button_consultar} onPress={() => navigation.navigate('Google Maps')}></Button>
       <Text style={styles.white_text}>Calcular quanto irei gastar de combustível</Text>
