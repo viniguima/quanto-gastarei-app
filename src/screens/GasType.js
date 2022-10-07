@@ -15,8 +15,12 @@ export default function GasType({navigation}) {
   const [total, setTotal] = useState()
  
 function CalcularEtorGas() {
+  let EtPrice = parseFloat(priceAlc)
+  let GasPrice = parseFloat(priceGas)
+  
  
-  var resultConsult = (priceAlc / priceGas) 
+  
+  let resultConsult = (EtPrice / GasPrice) 
 
   if(resultConsult < 0.7){
     setTotal('É recomendável abastecer com álcool(etanol).') 
