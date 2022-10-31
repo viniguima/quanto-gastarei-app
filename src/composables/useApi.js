@@ -1,9 +1,9 @@
-import { api } from "boot/axios";
+import axios from "axios";
 
 export default function useApi(url) {
   const list = async () => {
     try {
-      const { data } = await api.get(url);
+      const { data } = await axios.get(url);
       return data;
     } catch (error) {
       throw new Error(error);
@@ -12,7 +12,7 @@ export default function useApi(url) {
 
   const post = async (form) => {
     try {
-      const { data } = await api.post(url, form);
+      const { data } = await axios.post(url, form);
       return data;
     } catch (error) {
       throw new Error(error);
@@ -21,7 +21,7 @@ export default function useApi(url) {
 
   const update = async (form) => {
     try {
-      const { data } = await api.update(`${url}/${form.id}`, form);
+      const { data } = await axios.update(`${url}/${form.id}`, form);
       return data;
     } catch (error) {
       throw new Error(error);
@@ -30,7 +30,7 @@ export default function useApi(url) {
 
   const remove = async (form) => {
     try {
-      const { data } = await api.delete(`${url}/${form.id}`, form);
+      const { data } = await axios.delete(`${url}/${form.id}`, form);
       return data;
     } catch (error) {
       throw new Error(error);
