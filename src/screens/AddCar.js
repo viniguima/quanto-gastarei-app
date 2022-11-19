@@ -1,11 +1,8 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
 import { Button } from "@react-native-material/core";
 import Logo from "../components/Logo";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
-
-// import { global_styles } from 'src/styles/global-styles'
 
 export default function AddCar({ navigation }) {
   const [carBrand, setCarBrand] = useState();
@@ -37,6 +34,7 @@ export default function AddCar({ navigation }) {
             value={carBrand}
             onChangeText={setCarBrand}
             keyboardType="text"
+            testID="carBrand"
           />
           <Text style={{ color: "#fff", fontSize: 20, marginTop: 15 }}>
             Insira o modelo do veículo:
@@ -46,6 +44,7 @@ export default function AddCar({ navigation }) {
             value={carModel}
             onChangeText={setCarModel}
             keyboardType="text"
+            testID="carModel"
           />
           <Text style={{ color: "#fff", fontSize: 20, marginTop: 15 }}>
             Insira o ano do veículo:
@@ -55,6 +54,7 @@ export default function AddCar({ navigation }) {
             value={carYear}
             onChangeText={setCarYear}
             keyboardType="text"
+            testID="carYear"
           />
           <Text style={{ color: "#fff", fontSize: 20, marginTop: 15 }}>
             Insira o consumo médio:
@@ -64,11 +64,13 @@ export default function AddCar({ navigation }) {
             value={carConsum}
             onChangeText={setCarConsum}
             keyboardType="text"
+            testID="avarageConsumption"
           />
           <Button
             title="Salvar"
             onPress={() => saveCar()}
             style={[styles.white_text, styles.button]}
+            testID="saveButton"
           ></Button>
           <Text
             style={{
