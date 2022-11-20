@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from '@testing-library/react-native'
 import GasType from '../../screens/GasType'
 
+
 describe('GasType', () => {
   it("should gasPrice input change! ", async () => {
     const input = 5.00;
@@ -21,6 +22,7 @@ describe('GasType', () => {
   });
 
   it("should tell that gasoline is better", () => {
+    render(<GasType />);
     const alcPrice = 4.50;
     const gasPrice = 5.00;
 
@@ -30,13 +32,14 @@ describe('GasType', () => {
 
     if (resultConsult < 0.7) {
       msg = 'É recomendável abastecer com álcool(etanol).';
-    } else if (resultConsult > 0.7) {
+    } else if (resultConsult >= 0.7) {
       msg = 'É recomendável abastecer com gasolina.';
     }
     expect(msg).toBe('É recomendável abastecer com gasolina.');
   });
 
   it("should tell that alcool is better", () => {
+    render(<GasType />);
     const alcPrice = 3.49;
     const gasPrice = 5.00;
 
@@ -49,7 +52,6 @@ describe('GasType', () => {
     } else if (resultConsult >= 0.7) {
       msg = 'É recomendável abastecer com gasolina.';
     }
-    console.log(resultConsult)
     expect(msg).toBe('É recomendável abastecer com álcool(etanol).');
   })
 });

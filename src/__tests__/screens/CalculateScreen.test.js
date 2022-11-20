@@ -41,6 +41,8 @@ describe('CalculateScreen', () => {
   })
 
   it('should calculate! ', async () => {
+    render(<CalculateScreen />);
+
     const dist = 20;
     const aut = 10;
     const gasPrice = 4.50;
@@ -56,6 +58,7 @@ describe('CalculateScreen', () => {
   });
 
   it('should change the result', async () => {
+    render(<CalculateScreen />);
 
     const dist = 20;
     const aut = 10;
@@ -69,7 +72,6 @@ describe('CalculateScreen', () => {
     const result = `Você gastará: R$${resultTravel.toFixed(2)} e prescisará de ${autonomia.toFixed(2)} Litros de gasolina.`
 
     const expectedResult = 'Você gastará: R$18.00 e prescisará de 2.00 Litros de gasolina.';
-
 
     expect(result).toBe(expectedResult);
   });
