@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "CarModel": "Onix Joy 1.0",
+    "CarYear": 2019,
+    "AutoCityGas": "9,1",
+    "AutoCityAlc": "12,9",
+    "AutoRoadGas": "10,8",
+    "AutoRoadAlc": "15,3"
+  },
+  {
+    "id": 2,
+    "CarModel": "Onix LT 1.4",
+    "CarYear": 2019,
+    "AutoCityGas": "8,6",
+    "AutoCityAlc": "12,5",
+    "AutoRoadGas": "10,2",
+    "AutoRoadAlc": "14,9"
+  },
+  {
+    "id": 3,
+    "CarModel": "Onix Activ 1.4 AT",
+    "CarYear": 2019,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "11,2",
+    "AutoRoadGas": "8,6",
+    "AutoRoadAlc": "12,6"
+  },
+  {
+    "id": 4,
+    "CarModel": "Onix LTZ 1.4",
+    "CarYear": 2019,
+    "AutoCityGas": "8,6",
+    "AutoCityAlc": "12,5",
+    "AutoRoadGas": "10,2",
+    "AutoRoadAlc": "14,9"
+  },
+  {
+    "id": 5,
+    "CarModel": "Onix Effect 1.4",
+    "CarYear": 2019,
+    "AutoCityGas": "8,6",
+    "AutoCityAlc": "12,5",
+    "AutoRoadGas": "10,2",
+    "AutoRoadAlc": "14,9"
+  },
+  {
+    "id": 6,
+    "CarModel": "Onix Activ 1.4",
+    "CarYear": 2019,
+    "AutoCityGas": "8,3",
+    "AutoCityAlc": "12,4",
+    "AutoRoadGas": "9,4",
+    "AutoRoadAlc": "13,8"
+  },
+  {
+    "id": 7,
+    "CarModel": "Onix Joy 1.0",
+    "CarYear": 2018,
+    "AutoCityGas": "9,1",
+    "AutoCityAlc": "12,9",
+    "AutoRoadGas": "10,8",
+    "AutoRoadAlc": "15,3"
+  },
+  {
+    "id": 8,
+    "CarModel": "Onix LT 1.0",
+    "CarYear": 2018,
+    "AutoCityGas": "8,8",
+    "AutoCityAlc": "12,9",
+    "AutoRoadGas": "10,5",
+    "AutoRoadAlc": "15,3"
+  },
+  {
+    "id": 9,
+    "CarModel": "Onix LTZ 1.4",
+    "CarYear": 2018,
+    "AutoCityGas": "8,6",
+    "AutoCityAlc": "12,5",
+    "AutoRoadGas": "10,2",
+    "AutoRoadAlc": "14,9"
+  },
+  {
+    "id": 10,
+    "CarModel": "Onix Activ 1.4 AT",
+    "CarYear": 2018,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "11,2",
+    "AutoRoadGas": "8,6",
+    "AutoRoadAlc": "12,6"
+  },
+  {
+    "id": 11,
+    "CarModel": "Onix LT 1.4 AT",
+    "CarYear": 2018,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,7",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,9"
+  },
+  {
+    "id": 12,
+    "CarModel": "Onix Advantage 1.4 AT",
+    "CarYear": 2018,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,7",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,9"
+  },
+  {
+    "id": 13,
+    "CarModel": "Onix LTZ 1.4 AT",
+    "CarYear": 2018,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,7",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,9"
+  },
+  {
+    "id": 14,
+    "CarModel": "Onix Joy 1.0",
+    "CarYear": 2017,
+    "AutoCityGas": "9,1",
+    "AutoCityAlc": "12,9",
+    "AutoRoadGas": "10,8",
+    "AutoRoadAlc": "15,3"
+  },
+  {
+    "id": 15,
+    "CarModel": "Onix LTZ 1.4 AT",
+    "CarYear": 2017,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,7",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,9"
+  },
+  {
+    "id": 16,
+    "CarModel": "Onix LT 1.4 AT",
+    "CarYear": 2017,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,7",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,9"
+  },
+  {
+    "id": 17,
+    "CarModel": "Onix Activ 1.4",
+    "CarYear": 2017,
+    "AutoCityGas": "8,3",
+    "AutoCityAlc": "12,4",
+    "AutoRoadGas": "9,4",
+    "AutoRoadAlc": "13,8"
+  },
+  {
+    "id": 18,
+    "CarModel": "Onix LT 1.0",
+    "CarYear": 2017,
+    "AutoCityGas": "8,8",
+    "AutoCityAlc": "12,9",
+    "AutoRoadGas": "10,5",
+    "AutoRoadAlc": "15,3"
+  },
+  {
+    "id": 19,
+    "CarModel": "Onix LT 1.4",
+    "CarYear": 2017,
+    "AutoCityGas": "8,6",
+    "AutoCityAlc": "12,5",
+    "AutoRoadGas": "10,2",
+    "AutoRoadAlc": "14,9"
+  },
+  {
+    "id": 20,
+    "CarModel": "Onix Activ 1.4 AT",
+    "CarYear": 2017,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "11,2",
+    "AutoRoadGas": "8,6",
+    "AutoRoadAlc": "12,6"
+  },
+  {
+    "id": 21,
+    "CarModel": "Onix Effect 1.4",
+    "CarYear": 2016,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 22,
+    "CarModel": "Onix LTZ 1.4",
+    "CarYear": 2016,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 23,
+    "CarModel": "Onix LT 1.0",
+    "CarYear": 2016,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "13,5"
+  },
+  {
+    "id": 24,
+    "CarModel": "Onix LS 1.0",
+    "CarYear": 2016,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "13,5"
+  },
+  {
+    "id": 25,
+    "CarModel": "Onix LT 1.4",
+    "CarYear": 2015,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 26,
+    "CarModel": "Onix LT 1.4 AT",
+    "CarYear": 2015,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "8,9",
+    "AutoRoadGas": "10,5",
+    "AutoRoadAlc": "13,3"
+  },
+  {
+    "id": 27,
+    "CarModel": "Onix LTZ 1.4 AT",
+    "CarYear": 2015,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "8,9",
+    "AutoRoadGas": "10,5",
+    "AutoRoadAlc": "13,3"
+  },
+  {
+    "id": 28,
+    "CarModel": "Onix LT 1.0",
+    "CarYear": 2015,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "12,5"
+  },
+  {
+    "id": 29,
+    "CarModel": "Onix Effect 1.4",
+    "CarYear": 2015,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 30,
+    "CarModel": "Onix LTZ 1.4",
+    "CarYear": 2015,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 31,
+    "CarModel": "Onix LTZ 1.4",
+    "CarYear": 2014,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 32,
+    "CarModel": "Onix LT 1.4 AT",
+    "CarYear": 2014,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "8,9",
+    "AutoRoadGas": "10,5",
+    "AutoRoadAlc": "13,3"
+  },
+  {
+    "id": 33,
+    "CarModel": "Onix LTZ 1.4 AT",
+    "CarYear": 2014,
+    "AutoCityGas": "7,7",
+    "AutoCityAlc": "8,9",
+    "AutoRoadGas": "10,5",
+    "AutoRoadAlc": "13,3"
+  },
+  {
+    "id": 34,
+    "CarModel": "Onix LT 1.0",
+    "CarYear": 2014,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "12,5"
+  },
+  {
+    "id": 35,
+    "CarModel": "Onix LS 1.0",
+    "CarYear": 2014,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "12,5"
+  },
+  {
+    "id": 36,
+    "CarModel": "Onix Lollapalooza 1.0",
+    "CarYear": 2014,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "12,5"
+  },
+  {
+    "id": 37,
+    "CarModel": "Onix LT 1.0",
+    "CarYear": 2013,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "12,5"
+  },
+  {
+    "id": 38,
+    "CarModel": "Onix LT 1.4",
+    "CarYear": 2013,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  },
+  {
+    "id": 39,
+    "CarModel": "Onix LS 1.0",
+    "CarYear": 2013,
+    "AutoCityGas": "7,8",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,2",
+    "AutoRoadAlc": "12,5"
+  },
+  {
+    "id": 40,
+    "CarModel": "Onix LTZ 1.4",
+    "CarYear": 2013,
+    "AutoCityGas": "7,9",
+    "AutoCityAlc": "11,5",
+    "AutoRoadGas": "9,6",
+    "AutoRoadAlc": "13,6"
+  }
+]
