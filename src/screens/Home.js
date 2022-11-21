@@ -24,9 +24,9 @@ export default function Home({ navigation }) {
         onPress={() => navigation.navigate("Como Usar")}
       />
       <Button
-        title="Cadastrar Carro"
+        title="Consultar autonomia"
         style={[styles.white_text, styles.button]}
-        onPress={() => navigation.navigate("Cadastrar Carro")}
+        onPress={() => navigation.navigate("Consultar Autonomia")}
       />
       <StatusBar style="auto" />
     </View>
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#5e4de0",
     width: 200,
+    padding:4,
     marginTop: 30,
   },
   tinyLogo: {
