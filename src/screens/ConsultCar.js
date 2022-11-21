@@ -14,7 +14,7 @@ export default function ConsultCar({navigation}) {
   const cars = require('../data/cars.json')
 
   useEffect(() => {
-    axios.get('http://192.168.1.33:3333/cars').then(({data}) => {
+    axios.get('http://localhost:3333/cars').then(({data}) => {
       setCarros(data)
     })
   }, [])
