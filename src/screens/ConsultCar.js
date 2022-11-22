@@ -2,7 +2,7 @@ import React, {Component, useEffect, useState} from "react";
 import { StyleSheet, Text, View, FlatList, ScrollView, Image } from "react-native";
 import { Button } from "@react-native-material/core";
 import Logo from "../components/Logo";
-import list from "../services/composables/api";
+import api from "../services/composables/api"
 
 // import api from "../services/composables/api";
 // import { global_styles } from 'src/styles/global-styles'
@@ -14,7 +14,7 @@ export default function ConsultCar({navigation}) {
   const cars = require('../data/cars.json')
 
   useEffect(() => {
-    axios.get('http://localhost:3333/cars').then(({data}) => {
+    api.get('/cars').then(({data}) => {
       setCarros(data)
     })
   }, [])
@@ -41,11 +41,6 @@ export default function ConsultCar({navigation}) {
       </View>
       ))}
       <View style={{marginTop:20, marginBottom:20}}>
-       <Button
-        title="Adicionar Carro"
-        style={styles.button}
-        onPress={() => navigation.navigate("Adicionar Carro")}
-      />
       </View>
     </ScrollView>
     
