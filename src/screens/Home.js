@@ -28,6 +28,11 @@ export default function Home({ navigation }) {
         style={[styles.white_text, styles.button]}
         onPress={() => navigation.navigate("Consultar Autonomia")}
       />
+      <Button
+      title="Adicionar Carro"
+      style={styles.button}
+      onPress={() => navigation.navigate("Adicionar Carro")}
+/>
       <StatusBar style="auto" />
     </View>
   );

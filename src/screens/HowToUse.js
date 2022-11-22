@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from "@react-native-material/core";
 import Logo from '../components/Logo';
+import { ScrollView } from 'react-native-gesture-handler';
 // import { global_styles } from 'src/styles/global-styles'
 
 export default function HowToUse({navigation}) {
   return (
+      <ScrollView>
     <View style={styles.container}> 
       <Logo/> 
       <Text style={styles.white_text_title}>Como Usar</Text>
@@ -13,7 +15,10 @@ export default function HowToUse({navigation}) {
       <Text style={styles.white_text}>3- Escolha o número de viagens ou quantas viagens você irá fazer, exemplo: ida e volta, seriam 2 duas viagens.</Text>
       <Text style={styles.white_text}>4- Clique em calcular para ver o quanto você gastará de combustível nesse trajeto e quanto gastará de dinheiro.</Text>
       <Text style={styles.white_text}>5- E agora com a funcionalidade de poder ver se vale a pena abastecer com Etanol ou Gasolina.</Text>        
+      <Text style={styles.white_text}>6- Clique em Consultar autonomia para ver nosso banco de dados com os carros e suas autonomias.</Text>        
+      <Text style={styles.white_text_last}>7- Caso não encontre seu carro você pode cadastrar você mesmo basta clicar em adicionar carro para adicionar seu carro.</Text>     
     </View>
+      </ScrollView>   
   );
 }
 
@@ -29,6 +34,15 @@ const styles = StyleSheet.create({
       textAlign:'center',
       fontSize:16,
       padding:20
+      
+    },
+    white_text_last: {
+      color: 'white',
+      textAlign:'center',
+      fontSize:16,
+      padding:20,
+      marginBottom:50
+      
     },
     white_text_title: {
       color: 'white',

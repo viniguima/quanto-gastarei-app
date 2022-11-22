@@ -1,29 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView, Platform  } from 'react-native';
+import React, {Component, useEffect, useState} from "react";
+import { StyleSheet, Text, View, TextInput, ScrollView, Platform, Alert  } from 'react-native';
 import { Button } from "@react-native-material/core";
 import Logo from "../components/Logo"
 import { TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView } from 'react-native';
-
+import axios from 'axios';
+import api from "../services/composables/api"
 // import { global_styles } from 'src/styles/global-styles'
 
 
 
-export default function CalculateScreen({navigation}) {
+export default function AddCar({navigation}) {
   const [model, setModel] = useState()
   const [year, setYear] = useState()
   const [gasoCity, setGasoCity] = useState()
   const [gasoRoad, setGasoRoad] = useState()
   const [alcCity, setAlcCity] = useState()
-  const [alcRoad, setAlcRoad] = useState(false)
+  const [alcRoad, setAlcRoad] = useState()
   
+  const createPost = () => {
+    api.post('/cars', {
+        id:0,
+        CarModel: model,
+        CarYear: year,
+        AutoCityGas: gasoCity,
+        AutoCityAlc: alcCity,
+        AutoRoadGas: gasoRoad,
+        AutoRoadAlc: alcRoad
+      })
+      .then(({ data }) => console.log(data))
+
+      if({ status: 'User created successfully!' }) {
+        Alert.alert('Usuario criado com sucesso')
+      }else{
+        Alert.alert('Ocorreu um erro')
+      }
+  };
+
+
   
   return (
     
     <View style={styles.container}> 
+      <ScrollView>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 
-      <ScrollView>
       <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}
       style={{alignItems:'center',justifyContent:'center'}}
       keyboardVerticalOffset={280}>
@@ -70,11 +91,10 @@ export default function CalculateScreen({navigation}) {
                 onChangeText={setAlcRoad}
                 keyboardType="numeric"
             />
-      <Button title="Cadastrar" onPress={() => Calcular()} style={[styles.white_text, styles.button]}></Button>
-      <Text style={{alignItems:'center', textAlign:'center', color: 'white',marginTop:10, fontSize:20}}></Text>
+      <Button title="Cadastrar" onPress={() => createPost()} style={[styles.white_text, styles.button]}></Button>
       </KeyboardAvoidingView>
-     </ScrollView>
       </TouchableWithoutFeedback>
+     </ScrollView>
       </View>
   );
 }
@@ -94,8 +114,8 @@ const styles = StyleSheet.create({
       backgroundColor: '#5e4de0',
       width: 200,
       marginTop: 30,
-      padding:20,
-      marginBottom:15
+      padding:12,
+      marginBottom:30
       
     },
 
@@ -104,3 +124,5 @@ const styles = StyleSheet.create({
       height: 60,
     },
   });
+
+  
