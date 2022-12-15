@@ -31,7 +31,7 @@ export default function AddCar({navigation}) {
       .then(({ data }) => console.log(data))
 
       if({ status: 'User created successfully!' }) {
-        Alert.alert('Usuario criado com sucesso')
+        Alert.alert('Carro cadastrado com sucesso')
       }else{
         Alert.alert('Ocorreu um erro')
       }

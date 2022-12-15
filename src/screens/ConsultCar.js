@@ -7,11 +7,13 @@ import api from "../services/composables/api"
 // import api from "../services/composables/api";
 // import { global_styles } from 'src/styles/global-styles'
 import axios from "axios";
+import { TextInput } from "react-native-gesture-handler";
 
 
 export default function ConsultCar({navigation}) {
   const [carros, setCarros] = useState([])
   const cars = require('../data/cars.json')
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     api.get('/cars').then(({data}) => {
@@ -26,8 +28,18 @@ export default function ConsultCar({navigation}) {
             /> 
       
       <Text style={styles.white_text_title}>Consultar Autonomia</Text>
+      <TextInput 
+      placeholder="Pesquisar..." style={styles.search_input}
+      onChangeText={setSearch}
+      />
 
-      {carros.map(item  => (
+      {carros.filter((val) => {
+        if(search == "") {
+          return  val
+        }else if(val.CarModel.includes(search)){
+          return val
+        }
+      }).map(item  => (
       <View key={item.id}>
       <Text style={styles.white_text_car_name}>{item.CarModel} - {item.CarYear}</Text>
       <Text style={styles.white_text_city}>
@@ -86,6 +98,17 @@ const styles = StyleSheet.create({
       fontSize:18,
       padding:12,
       backgroundColor:'#2E8B57',
+    },
+    search_input:{
+      color: '#000',
+      textAlign:'center',
+      alignSelf:'center',
+      fontSize:15,
+      padding:12,
+      backgroundColor:'#fff',
+      marginBottom: 20,
+      width:'90%',
+      borderRadius: 30
     },
     logo: {
       width: 250,
