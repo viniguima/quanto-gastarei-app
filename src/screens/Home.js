@@ -7,7 +7,6 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Logo style={{ flex: 1, alignItems: "top" }} />
-      <Text style={styles.white_text}>Quanto irei gastar de combustível!</Text>
       <Button
         title="Gasto do Trajeto"
         style={[styles.white_text, styles.button]}

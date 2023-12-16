@@ -15,8 +15,7 @@ export default function AddCar({navigation}) {
   const [year, setYear] = useState()
   const [gasoCity, setGasoCity] = useState()
   const [gasoRoad, setGasoRoad] = useState()
-  const [alcCity, setAlcCity] = useState()
-  const [alcRoad, setAlcRoad] = useState()
+
   
   const createPost = () => {
     api.post('/cars', {
@@ -42,7 +41,10 @@ export default function AddCar({navigation}) {
   return (
     
     <View style={styles.container}> 
-      <ScrollView>
+      <ScrollView 
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}      
+      >
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 
       <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -63,34 +65,22 @@ export default function AddCar({navigation}) {
                 onChangeText={setYear}
                 keyboardType="numeric"
             />
-            <Text style={{color:"#fff", fontSize:20, marginTop:25, textAlign:'center', textAlign:'center'}}>Insira a autonomia do seu carro com {'\n'} Gasolina na cidade:</Text>
+            <Text style={{color:"#fff", fontSize:20, marginTop:25, textAlign:'center', textAlign:'center'}}>Insira a autonomia do seu carro {'\n'} na cidade:</Text>
             <TextInput
                 style={{borderWidth:2,height:45,width:200,marginTop:10,borderColor:'#fff', borderRadius:5, color:"#fff"}}
                 value={gasoCity}
                 onChangeText={setGasoCity}
                 keyboardType="numeric"
             />
-            <Text style={{color:"#fff", fontSize:20, marginTop:25, textAlign:'center'}}>Insira a autonomia do seu carro com {'\n'} Etanol na cidade:</Text>
-            <TextInput
-                style={{borderWidth:2,height:45,width:200,marginTop:10,borderColor:'#fff', borderRadius:5, color:"#fff"}}
-                value={alcCity}
-                onChangeText={setAlcCity}
-                keyboardType="numeric"
-            />
-            <Text style={{color:"#fff", fontSize:20, marginTop:25, textAlign:'center'}}>Insira a autonomia do seu carro com {'\n'} Gasolina na estrada:</Text>
+          
+            <Text style={{color:"#fff", fontSize:20, marginTop:25, textAlign:'center'}}>Insira a autonomia do seu carro {'\n'} na estrada:</Text>
             <TextInput
                 style={{borderWidth:2,height:45,width:200,marginTop:10,borderColor:'#fff', borderRadius:5, color:"#fff"}}
                 value={gasoRoad}
                 onChangeText={setGasoRoad}
                 keyboardType="numeric"
             />
-            <Text style={{color:"#fff", fontSize:20, marginTop:25, textAlign:'center'}}>Insira a autonomia do seu carro com {'\n'} Etanol na estrada:</Text>
-            <TextInput
-                style={{borderWidth:2,height:45,width:200,marginTop:10,borderColor:'#fff', borderRadius:5, color:"#fff"}}
-                value={alcRoad}
-                onChangeText={setAlcRoad}
-                keyboardType="numeric"
-            />
+        
       <Button title="Cadastrar" onPress={() => createPost()} style={[styles.white_text, styles.button]}></Button>
       </KeyboardAvoidingView>
       </TouchableWithoutFeedback>
